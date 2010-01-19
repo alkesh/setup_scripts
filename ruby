@@ -16,7 +16,7 @@ make
 sudo make install
 cd ..
 
-curl -o $rubygems_file $rubygems_location$rubygems_file -x $http_proxy
+curl -L -o $rubygems_file $rubygems_location$rubygems_file -x $http_proxy
 tar xvfz $rubygems_file
 cd ${rubygems_file%.tgz}
 sudo ruby setup.rb
