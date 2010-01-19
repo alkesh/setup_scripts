@@ -1,7 +1,7 @@
 #!/bin/bash
 export http_proxy=http://proxy.intra.bt.com:8080
 ruby_location=ftp://ftp.ruby-lang.org/pub/ruby/
-ruby_file=ruby-1.8.7-p248.tar.gz
+ruby_file=ruby-1.8.7-p249.tar.gz
 rubygems_location=http://rubyforge.org/frs/download.php/60718/
 rubygems_file=rubygems-1.3.5.tgz
 
