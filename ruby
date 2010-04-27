@@ -9,7 +9,7 @@ rubygems_location=http://production.cf.rubygems.org/rubygems/
 rubygems_file=rubygems-1.3.6.tgz
 
 # CentOS prerequisites
-sudo yum install -y gcc zlib-devel readline-devel openssl-devel openssl
+sudo yum install -y gcc zlib-devel readline-devel openssl-devel openssl make
 
 curl -o $ruby_file $ruby_location$ruby_file -x $http_proxy
 tar xvfz $ruby_file
