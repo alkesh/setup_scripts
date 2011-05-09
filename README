@@ -1,1 +1,4 @@
 Setup scripts for CentOS for Ruby 1.8.7 and git
+
+To install ruby and rubygems as root:
+bash < <(curl -s https://github.com/alkesh/setup_scripts/raw/master/ruby/ruby-as-root)

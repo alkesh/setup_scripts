@@ -5,7 +5,7 @@ rubygems_location=http://production.cf.rubygems.org/rubygems/
 rubygems_file=rubygems-1.7.2.tgz
 
 # CentOS prerequisites
-sudo yum install -y gcc zlib-devel readline-devel openssl-devel openssl make
+sudo yum install -y gcc zlib-devel readline-devel openssl-devel openssl make || exit 1
 
 curl -o $ruby_file $ruby_location$ruby_file
 tar xvfz $ruby_file
