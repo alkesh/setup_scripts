@@ -1,6 +1,8 @@
 #!/bin/bash
 ruby_location=ftp://ftp.ruby-lang.org/pub/ruby/
 ruby_file=ruby-1.8.7-p334.tar.gz
+#ruby_location=http://ftp.ruby-lang.org/pub/ruby/1.9/
+#ruby_file=ruby-1.9.2-p180.tar.gz
 rubygems_location=http://production.cf.rubygems.org/rubygems/
 rubygems_file=rubygems-1.7.2.tgz
 
