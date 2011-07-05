@@ -2,7 +2,7 @@
 export http_proxy=http://proxy.intra.bt.com:8080
 
 git_location=http://kernel.org/pub/software/scm/git/
-git_file=git-1.6.5.4.tar.gz
+git_file=git-1.7.6.tar.gz
 
 # CentOS prerequisites
 sudo yum install -y curl-devel
