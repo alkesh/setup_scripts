@@ -1,0 +1,27 @@
+#!/bin/bash
+ruby_location=http://ftp.ruby-lang.org/pub/ruby/1.9/
+ruby_file=ruby-1.9.2-p180.tar.gz
+rubygems_location=http://production.cf.rubygems.org/rubygems/
+rubygems_file=rubygems-1.7.2.tgz
+
+# CentOS prerequisites
+yum install -y gcc zlib-devel readline-devel openssl-devel openssl make \
+  gcc-c++ curl-devel httpd-devel apr-devel apr-util-devel krb5-devel e2fsprogs-devel libxml2 \
+  libxml2-devel libxslt libxslt-devel || exit 1
+
+curl -o $ruby_file $ruby_location$ruby_file
+tar xvfz $ruby_file
+cd ${ruby_file%.tar.gz}
+./configure
+make
+make install
+cd ext/openssl
+ruby extconf.rb
+make
+make install
+cd ../../..
+
+curl -L -o $rubygems_file $rubygems_location$rubygems_file
+tar xvfz $rubygems_file
+cd ${rubygems_file%.tgz}
+ruby setup.rb
