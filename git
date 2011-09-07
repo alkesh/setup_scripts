@@ -11,5 +11,5 @@ tar xvfz $git_file -C ${git_file%.tar.gz}
 cd ${git_file%.tar.gz}/git*
 ./configure
 make
-#make install
+make install
 cd ../..
