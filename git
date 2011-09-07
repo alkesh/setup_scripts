@@ -1,15 +1,14 @@
 #!/bin/bash
-git_location=https://github.com/git/git/tarball/v1.7.6.1
+git_location=http://fossies.org/unix/misc/
 git_file=git-1.7.6.1.tar.gz
 
 # CentOS prerequisites
 yum install -y curl-devel
 
-curl -Lo $git_file $git_location
-mkdir ${git_file%.tar.gz}
-tar xvfz $git_file -C ${git_file%.tar.gz}
-cd ${git_file%.tar.gz}/git*
+curl -o $git_file $git_location$git_file
+tar xvfz $git_file
+cd ${git_file%.tar.gz}
 ./configure
 make
 make install
-cd ../..
+cd ..
